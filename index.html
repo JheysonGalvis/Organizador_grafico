@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolástica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .box-1 {
+            background-color: #4caf50; /* Verde */
+        }
+
+        .box-2 {
+            background-color: #ff9800; /* Naranja */
+        }
+
+        .box-3 {
+            background-color: #2196f3; /* Azul */
+        }
+
+        .box-4 {
+            background-color: #9c27b0; /* Morado */
+        }
+
+        .box-5 {
+            background-color: #e91e63; /* Rosa */
+        }
+
+        .box-6 {
+            background-color: #607d8b; /* Gris azul */
+        }
+
+        .additional-info {
+            display: none;
+            margin-top: 10px;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 12px;
+            color: #f5f5f5;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2.1 Organizador gráfico de la Teoría Escolástica</h1>
+
+        <div class="box box-1" onclick="toggleInfo('info1')">
+            <p>¿Qué es la Escolástica?</p>
+            <div class="additional-info" id="info1">
+                <p>La palabra "Escolástica" viene del griego "scholastikos", que significa "relacionado con el tiempo libre". En la Edad Media, se refería a la enseñanza que combinaba la fe cristiana con la razón, pero dejando de lado el estudio de las ciencias experimentales.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <div class="box box-2" onclick="toggleInfo('info2')">
+            <p>Impacto de Platón y Aristóteles</p>
+            <div class="additional-info" id="info2">
+                <p>Los filósofos griegos Platón y Aristóteles tuvieron un gran impacto en el desarrollo del pensamiento escolástico, que se convirtió en la base de la filosofía moderna. En el siglo XIV, la escolástica enfrentó una crisis.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <div class="box box-3" onclick="toggleInfo('info3')">
+            <p>Principios de la Escolástica</p>
+            <div class="additional-info" id="info3">
+                <p>La escolástica se centró en dos principios importantes: 1. Buscar respuestas a las grandes preguntas de la vida y 2. Usar el silogismo aristotélico (un tipo de razonamiento lógico) como herramienta principal de argumentación.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <div class="box box-4" onclick="toggleInfo('info4')">
+            <p>Método de Enseñanza</p>
+            <div class="additional-info" id="info4">
+                <p>El método de enseñanza escolástico se basaba en tres pasos: lectura de textos, formulación de preguntas y discusión de las ideas.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <div class="box box-5" onclick="toggleInfo('info5')">
+            <p>Etapas de la Escolástica</p>
+            <div class="additional-info" id="info5">
+                <p>Durante la Alta Escolástica, los debates entre la filosofía y la teología (el estudio de Dios y la religión) fueron comunes. Fue una época de gran auge para la escolástica, pero también marcó la separación entre fe y razón.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <div class="box box-6" onclick="toggleInfo('info6')">
+            <p>Representantes Clásicos</p>
+            <div class="additional-info" id="info6">
+                <p>Algunos de los principales filósofos escolásticos fueron San Anselmo de Canterbury, Pedro Abelardo, Alberto Magno, Santo Tomás de Aquino, Juan Duns Escoto y Guillermo de Ockham.</p>
+            </div>
+            <span class="info-text">Haz clic para más detalles</span>
+        </div>
+
+        <footer>
+            Hecho por Jheyson Eduardo Galvis Valencia - 146033<br>
+            Presentado al Doctor Jorge Luis Ramírez Ortega<br>
+            Programa: Doctorado en Ciencias de la Educación<br>
+            Curso: Enfoques actuales de la educación
+        </footer>
+    </div>
+
+    <script>
+        function toggleInfo(infoId) {
+            var info = document.getElementById(infoId);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
